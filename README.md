@@ -91,6 +91,8 @@ df2=df.copy()
 enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 ```
 
+![image](https://github.com/user-attachments/assets/99cc80c7-2908-40ec-a76d-675adcce5766)
+
 ```py
 df2=pd.concat([df2,enc],axis=1)
 df2
@@ -110,12 +112,14 @@ pd.get_dummies(df2,columns=["nom_0"])
 ```py
 pip install --upgrade category_encoders
 ```
+![image](https://github.com/user-attachments/assets/f3a44a4e-da18-4d7e-94a6-3c7f2e909165)
 
 ```py
 from category_encoders import BinaryEncoder
 df=pd.read_csv("data.csv")
 df
 ```
+![image](https://github.com/user-attachments/assets/b740a73d-8866-4e79-b052-938a84e51e26)
 
 
 ```py
@@ -123,6 +127,7 @@ be=BinaryEncoder()
 nd=be.fit_transform(df['Ord_2'])
 df
 ```
+![image](https://github.com/user-attachments/assets/91cd65f9-f274-465a-96f0-8fd9b6741cae)
 
 
 ```py
