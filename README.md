@@ -81,7 +81,8 @@ dfc=df.copy()
 dfc['ord_2']=le.fit_transform(dfc['ord_2'])
 dfc
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/a91af21f-6723-443b-b884-d199935ca8a3)
+![image](https://github.com/user-attachments/assets/340dd1b7-c035-4c7b-b0dc-68e01945120c)
+
 
 ```py
 from sklearn.preprocessing import OneHotEncoder
@@ -90,20 +91,20 @@ df2=df.copy()
 enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 ```
 
-
 ```py
 df2=pd.concat([df2,enc],axis=1)
 df2
 ```
 
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/19d9c74d-8463-4ac3-afd4-d983418a8530)
+![image](https://github.com/user-attachments/assets/5bf7e719-b503-4081-a7f8-6f05740596b1)
+
 
 
 
 ```py
 pd.get_dummies(df2,columns=["nom_0"])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/17b96833-f77a-4bfe-a9ee-d9f973d2a145)
+![image](https://github.com/user-attachments/assets/9ea27ff8-6202-4592-9159-c06d65a382ee)
 
 
 ```py
@@ -128,7 +129,7 @@ df
 dfb=pd.concat([df,nd],axis=1)
 dfb
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/ae9b507b-9516-4cee-baa6-f5542515581f)
+![image](https://github.com/user-attachments/assets/00d82cc8-42a2-4114-a5cc-a0a878dfee8d)
 
 
 
@@ -140,7 +141,8 @@ new=te.fit_transform(X=CC["City"],y=CC["Target"])
 CC=pd.concat([CC,new],axis=1)
 CC
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/60889044-c6c5-4df3-bf2f-66add4552f55)
+![image](https://github.com/user-attachments/assets/11b77012-9973-4315-a924-cd4d6c09e961)
+
 
 
 ```py
@@ -150,58 +152,64 @@ import numpy as np
 df=pd.read_csv("Data_to_Transform.csv")
 df
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/bd6620d9-48c8-4aee-a628-159e85a4214b)
+![image](https://github.com/user-attachments/assets/67182f91-62f8-4e18-af49-d5dee85a97d7)
 
 
 ```py
 df.skew()
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/a9e0fee1-451c-4885-8055-6b2baf5d5d08)
+![image](https://github.com/user-attachments/assets/5cd31b83-d96d-4936-8d78-cb42e164da5c)
+
 
 
 ```py
 np.log(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/9d20113a-213b-447e-b70e-d5d5d4d73ba4)
+![image](https://github.com/user-attachments/assets/bb62bd1d-6e79-4c54-9f49-47946f8ede5b)
+
 
 
 ```py
 np.reciprocal(df["Moderate Positive Skew"])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/586c8338-b6a6-499b-8b51-ec4bc443583f)
+![image](https://github.com/user-attachments/assets/64e6879a-a6d4-485f-9202-ce2e45e9b9de)
+
 
 
 
 ```py
 np.sqrt(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/53aa0d66-2963-47b3-b0bc-b48c0fe4e05a)
+![image](https://github.com/user-attachments/assets/b9ff615d-90cd-491b-b0b8-7f9edff28117)
+
 
 
 ```py
 np.square(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/6bf5b6c6-f697-4ca6-8c97-6167d0a45fa8)
+![image](https://github.com/user-attachments/assets/cdf08503-a0d2-463e-8df6-dfc355e7ffc3)
+
 
 
 ```py
 df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
 df
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/b57d72a9-7e5f-4670-a02f-0ff73104d24f)
+![image](https://github.com/user-attachments/assets/57041cd7-b6cb-4dde-ab7a-2a6391598147)
 
 
 ```py
 df.skew()
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/09de5543-18fc-4968-8aa9-1082f8610b8d)
+![image](https://github.com/user-attachments/assets/24429d16-81ce-41e6-8fa1-c81e0ddac327)
+
 
 
 ```py
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
 df.skew()
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/5a2f96dc-6105-4cd7-aa27-69a1893c0cdc)
+![image](https://github.com/user-attachments/assets/3650b07b-62c4-4f1d-9ade-dc23d20e17dc)
 
 ```py
 from sklearn.preprocessing import QuantileTransformer
@@ -209,7 +217,8 @@ qt=QuantileTransformer(output_distribution='normal')
 df["Moderate Negative Skew_1"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 df
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/092734aa-52a6-4b13-b25f-d9cf2d8eb45d)
+![image](https://github.com/user-attachments/assets/c9498572-aa58-45d5-be29-c9c0e713e98e)
+
 
 ```py
 import seaborn as sns
@@ -218,7 +227,8 @@ import matplotlib.pyplot as plt
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/45da37db-b7e8-4866-bbcd-ff6b9b429557)
+![image](https://github.com/user-attachments/assets/c9ef2b1e-6ba5-45c2-acfe-206bcbf8470f)
+
 
 
 ```py
@@ -226,7 +236,8 @@ sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
 
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/8d5490fa-4651-47c8-bd6f-d42bc6c8bb1c)
+![image](https://github.com/user-attachments/assets/29bbcd01-12c4-4e24-954f-be005bcd7a0f)
+
 
 
 
@@ -240,7 +251,8 @@ sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/9cc1839f-34f1-47e5-a757-bb4540a4cd2f)
+![image](https://github.com/user-attachments/assets/8bbbd31b-ae2c-4140-9cfb-3dd35d6d3fed)
+
 
 
 
@@ -250,7 +262,38 @@ sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
 ```
 
-![319878460-6f7a4eaa-1c54-4409-8b57-8b407d5842f7](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/5d511ce4-1999-414c-84a6-d3989e63aa6e)
+![image](https://github.com/user-attachments/assets/f5211916-d097-4870-abf3-0e13ff30595c)
+
+
+```py
+dt=pd.read_csv("titanic_dataset.csv")
+dt
+```
+
+```py
+from sklearn.preprocessing import QuantileTransformer
+qt=QuantileTransformer(output_distribution='normal',n_quantiles=891)
+dt["Age_1"]=qt.fit_transform(dt[["Age"]])
+sm.qqplot(dt['Age'],line='45') 
+plt.show()
+```
+
+![image](https://github.com/user-attachments/assets/f3cf99ee-e177-41b4-9ebf-1007884a80b3)
+
+```py
+sm.qqplot(df["Highly Negative Skew_1"],line='45')
+plt.show()
+```
+
+![image](https://github.com/user-attachments/assets/2d20e56f-4004-4025-a974-578572271546)
+
+
+
+
+## RESULT:
+Thus the given data, Feature Encoding, Transformation process and save the data to a file was performed successfully.
+       
+
 
 
        
