@@ -54,7 +54,7 @@ import pandas as pd
 df=pd.read_csv("Encoding Data.csv")
 df
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/12381f5d-89ba-489d-8d6c-91930b7cb65a)
+![image](https://github.com/user-attachments/assets/07fd8b92-4167-4ee8-9e5a-1cd5b80ac28b)
 
 
 ```py
@@ -63,14 +63,15 @@ pm=['Hot','Warm','Cold']
 e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/a0826cf9-8f9d-4844-8198-5808e9539fa5)
+![image](https://github.com/user-attachments/assets/bf0a1060-133f-4056-8f4f-424dde02c6b1)
 
 
 ```py
 df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 ```
-![image](https://github.com/PriyankaAnnadurai/EXNO-3-DS/assets/118351569/448447cf-f983-4fdb-a37b-54e517ed5572)
+![image](https://github.com/user-attachments/assets/c76c2555-5242-46ac-83b5-b5c6e2a3e030)
+
 
 
 ```py
