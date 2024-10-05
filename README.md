@@ -54,7 +54,8 @@ import pandas as pd
 df=pd.read_csv("Encoding Data.csv")
 df
 ```
-![image](https://github.com/user-attachments/assets/07fd8b92-4167-4ee8-9e5a-1cd5b80ac28b)
+![image](https://github.com/user-attachments/assets/0ca37861-aa74-4b34-a434-ac7b92fa501c)
+
 
 
 ```py
