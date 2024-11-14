@@ -1,5 +1,6 @@
 # EX NO:3-Feature Encoding and Transformation
-
+### NAME:SANJAY ASHWIN P 
+### REG NO:212223040181
 ## AIM:
 To read the given data and perform Feature Encoding and Transformation process and save the data to a file.
 
